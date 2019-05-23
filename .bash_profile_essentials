@@ -1,0 +1,32 @@
+# show path and git branch in bash prompt
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+
+# brew maintenance function
+
+brewup() {
+    brew update;
+    brew upgrade;
+    brew prune;
+    brew cleanup;
+    brew doctor;
+    rm -rf $(brew --cache);
+    brew cask update;
+    brew cask upgrade;
+    brew cask doctor;
+    brew cask cleanup;
+}
+
+# NVM admin
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Source git-completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi

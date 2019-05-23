@@ -1,0 +1,43 @@
+# copy to Users/<user_name>/.atom/config.cson
+
+"*":
+  core:
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontSize: 12
+    lineHeight: 1.25
+    preferredLineLength: 100
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "6620ae12-b1a9-4a86-942e-366b63c35a30"
+  "flow-ide": {}
+  "git-blame":
+    columnWidth: 312
+  "linter-eslint":
+    autofix:
+      fixOnSave: true
+  "linter-ui-default": {}
+  minimap:
+    plugins:
+      linter: true
+      linterDecorationsZIndex: 0
+  "path-copy":
+    copyExtension: false
+    copyFolderPath: false
+    copyFullName: false
+    copyProjectPath: false
+    copyShortName: false
+  "prettier-atom":
+    formatOnSaveOptions:
+      showInStatusBar: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".editorconfig.source":
+  editor:
+    showIndentGuide: false
