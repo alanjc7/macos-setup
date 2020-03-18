@@ -18,7 +18,6 @@ brewup() {
     brew cask update;
     brew cask upgrade;
     brew cask doctor;
-    brew cask cleanup;
 }
 
 # NVM admin

@@ -58,13 +58,12 @@ done
 
 homebrew_cask_apps=(
   1password
-  atom
+  visual-studio-code
   evernote
   google-chrome
   iterm2
   postman
   slack
-  tidal
 )
 
 for app in "${homebrew_cask_apps[@]}"; do
@@ -74,23 +73,15 @@ done
 brew cleanup
 
 
-# Atom (packages)
-atom_packages=(
-  editorconfig
-  git-blame
-  hyperclick
-  linter
-  linter-eslint
-  linter-rubocop
-  linter-ui-default
-  minimap
-  minimap-linter
-  pigments
-  prettier-atom
+# VSCode (Extensions)
+vscode_extensions=(
+  dbaeumer.vscode-eslint
+  eamodio.gitlens
+  esbenp.prettier-vscode
+  rebornix.ruby
+  misogi.ruby-rubocop
 )
 
-for package in "${atom_packages[@]}"; do
-  if [[ ! -d "$HOME/.atom/packages/$package" ]]; then
-    eval apm install "$package"
-  fi
+for extension in "${vscode_extensions[@]}"; do
+  eval code --install-extension "$extention"
 done

@@ -15,3 +15,4 @@
   bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
   po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 	cod = checkout development
+  com = checkout master
