@@ -80,6 +80,7 @@ vscode_extensions=(
   esbenp.prettier-vscode
   rebornix.ruby
   misogi.ruby-rubocop
+  wingrunr21.vscode-ruby
 )
 
 for extension in "${vscode_extensions[@]}"; do
