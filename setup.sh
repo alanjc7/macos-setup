@@ -1,42 +1,5 @@
 #!/bin/bash
 
-function query_github_api {
-  eval curl "${2:-'-sL'}" "https://api.github.com/$1"
-}
-
-function query_raw_github_user_content {
-  eval curl "${2:-'-sL'}" "https://raw.githubusercontent.com/$1"
-}
-
-function get_latest_tag_name {
-  query_github_api "repos/$1/releases/latest" | grep 'tag_name' | sed -E 's/.*"([^"]+)".*/\1/'
-}
-
-# Setup Bash profile
-[ ! -e "$HOME/.bash_profile" ] && touch "$HOME/.bash_profile"
-cat .bash_profile_essentials >> "$HOME/.bash_profile"
-
-
-# Node Version Manager
-repository="creationix/nvm"
-tag_name=$(get_latest_tag_name "$repository")
-
-if [[ -e "$HOME/.nvm/nvm.sh" ]]; then
-  # shellcheck source=/dev/null
-  . "$HOME/.nvm/nvm.sh"
-fi
-
-if [[ ! -d "$HOME/.nvm/.git" ]] || [[ $(nvm --version) != "${tag_name#'v'}" ]]; then
-  query_raw_github_user_content "$repository/$tag_name/install.sh" | bash
-
-  if [[ ! -s $(nvm which "$(nvm version-remote stable)") ]]; then
-    nvm install stable && nvm alias default stable
-  fi
-
-  nvm cache clear
-fi
-
-
 # Homebrew (+ Cask)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
