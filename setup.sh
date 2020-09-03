@@ -38,11 +38,7 @@ fi
 
 
 # Homebrew (+ Cask)
-if [[ -z $(command -v brew) ]]; then
-  ruby -e "$(query_raw_github_user_content "homebrew/install/master/install" "-fsSL")"
-else
-  brew update && brew upgrade
-fi
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 homebrew_packages=(
   bash
