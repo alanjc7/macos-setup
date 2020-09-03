@@ -43,5 +43,5 @@ vscode_extensions=(
 )
 
 for extension in "${vscode_extensions[@]}"; do
-  eval code --install-extension "$extention"
+  eval code --install-extension "$extension"
 done
