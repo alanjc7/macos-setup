@@ -40,6 +40,8 @@ vscode_extensions=(
   rebornix.ruby
   misogi.ruby-rubocop
   wingrunr21.vscode-ruby
+  ms-vsliveshare.vsliveshare-pack
+  vayan.haml
 )
 
 for extension in "${vscode_extensions[@]}"; do
