@@ -20,9 +20,11 @@ homebrew_cask_apps=(
   visual-studio-code
   evernote
   google-chrome
+  firefox
   iterm2
   postman
   slack
+  tidal
 )
 
 for app in "${homebrew_cask_apps[@]}"; do
