@@ -97,3 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gcom="git commit -m"
+dexec () {
+  docker exec -it $1 bash
+}
+alias -g dstop="docker ps -q | xargs docker stop"
+alias -g drma="docker ps -aq | xargs docker rm -f"
+alias -g dpra="docker builder prune -f | docker volume prune -f | docker image prune -f | docker system df"
+
+eval "$(rbenv init -)"
