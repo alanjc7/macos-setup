@@ -48,7 +48,6 @@ vscode_extensions=(
   ms-vsliveshare.vsliveshare-pack
   octref.vetur
   rebornix.ruby
-  redhat.vscode-commons
   streetsidesoftware.code-spell-checker
   syler.sass-indented
   vayan.haml
