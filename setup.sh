@@ -39,11 +39,20 @@ vscode_extensions=(
   dbaeumer.vscode-eslint
   eamodio.gitlens
   esbenp.prettier-vscode
-  rebornix.ruby
+  mechatroner.rainbow-csv
   misogi.ruby-rubocop
-  wingrunr21.vscode-ruby
+  ms-azuretools.vscode-docker
+  ms-vscode-remote.remote-containers
+  ms-vsliveshare.vsliveshare
+  ms-vsliveshare.vsliveshare-audio
   ms-vsliveshare.vsliveshare-pack
+  octref.vetur
+  rebornix.ruby
+  redhat.vscode-commons
+  streetsidesoftware.code-spell-checker
+  syler.sass-indented
   vayan.haml
+  wingrunr21.vscode-ruby
 )
 
 for extension in "${vscode_extensions[@]}"; do
