@@ -21,6 +21,7 @@ homebrew_cask_apps=(
   evernote
   google-chrome
   firefox
+  brave-browser
   iterm2
   postman
   slack
