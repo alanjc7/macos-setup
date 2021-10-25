@@ -20,11 +20,10 @@ homebrew_cask_apps=(
   visual-studio-code
   evernote
   google-chrome
-  firefox
   brave-browser
   iterm2
   postman
-  slack
+  discord
   tidal
 )
 
