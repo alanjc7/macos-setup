@@ -7,7 +7,6 @@ homebrew_packages=(
   bash
   bash-completion
   git
-  watchman
   yarn\ --ignore-dependencies
 )
 
@@ -28,7 +27,7 @@ homebrew_cask_apps=(
 )
 
 for app in "${homebrew_cask_apps[@]}"; do
-  eval brew cask install "$app"
+  eval brew install --cask "$app"
 done
 
 brew cleanup
