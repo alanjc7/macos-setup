@@ -4,8 +4,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 homebrew_packages=(
-  bash
-  bash-completion
   git
   yarn\ --ignore-dependencies
 )
@@ -56,3 +54,6 @@ vscode_extensions=(
 for extension in "${vscode_extensions[@]}"; do
   eval code --install-extension "$extension"
 done
+
+# Install OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
