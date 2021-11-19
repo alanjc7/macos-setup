@@ -47,7 +47,6 @@ vscode_extensions=(
   rebornix.ruby
   streetsidesoftware.code-spell-checker
   syler.sass-indented
-  vayan.haml
   wingrunr21.vscode-ruby
 )
 
