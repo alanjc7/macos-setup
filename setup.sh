@@ -17,13 +17,8 @@ done
 
 homebrew_cask_apps=(
   1password
-  visual-studio-code
-  evernote
-  google-chrome
-  brave-browser
-  iterm2
-  postman
-  discord
+  warp
+  arc
   tidal
 )
 
@@ -34,27 +29,24 @@ done
 brew cleanup
 
 
-# VSCode (Extensions)
-vscode_extensions=(
+# Cursor (Extensions)
+cursor_extensions=(
+  anysphere.cursorpyright
+  charliermarsh.ruff
   dbaeumer.vscode-eslint
   eamodio.gitlens
   esbenp.prettier-vscode
-  mechatroner.rainbow-csv
-  misogi.ruby-rubocop
+  ms-azuretools.vscode-containers
   ms-azuretools.vscode-docker
-  ms-vscode-remote.remote-containers
-  ms-vsliveshare.vsliveshare
-  ms-vsliveshare.vsliveshare-audio
-  ms-vsliveshare.vsliveshare-pack
-  octref.vetur
-  rebornix.ruby
+  ms-pyright.pyright
+  ms-python.debugpy
+  ms-python.python
+  oxc.oxc-vscode
   streetsidesoftware.code-spell-checker
-  syler.sass-indented
-  wingrunr21.vscode-ruby
 )
 
-for extension in "${vscode_extensions[@]}"; do
-  eval code --install-extension "$extension"
+for extension in "${cursor_extensions[@]}"; do
+  eval cursor --install-extension "$extension"
 done
 
 # Install OhMyZsh
