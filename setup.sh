@@ -19,6 +19,7 @@ homebrew_cask_apps=(
   1password
   warp
   arc
+  cursor
   tidal
 )
 
